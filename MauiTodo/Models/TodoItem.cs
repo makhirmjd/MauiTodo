@@ -1,7 +1,10 @@
-﻿namespace MauiTodo.Models;
+﻿using SQLite;
+
+namespace MauiTodo.Models;
 
 public class TodoItem
 {
+    [PrimaryKey, AutoIncrement]
     public int Id { get; set; }
     public string Title { get; set; } = default!;
     public DateTime Due { get; set; }
